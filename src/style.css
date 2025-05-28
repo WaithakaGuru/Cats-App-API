@@ -1,0 +1,199 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --back-main-color: #fff5f1;
+  --form-section-back-color: #fbd1c7;
+  --txt-color: #000;
+  --btn-back-color: #c593ae;
+  --btn-txt-color: #fff5f0;
+  --input-back-color: #fff;
+  --input-border-color: #e5e7eb;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', serif;
+  position: relative;
+}
+
+/* custom class */
+ .none{
+  display: none;
+ }
+ 
+/* end of custom classes */
+
+body{ 
+  background-color: var(--back-main-color);
+  height: 100dvh;
+  width: 100%;
+  box-sizing: border-box;
+} 
+
+#container{
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 8rem;  
+  height: 100%;
+}
+
+.forms-holder, .photo-facts-container{
+  width: 65.6%;
+}
+
+section.entry-forms-section{
+  width: 100%;
+  min-height: 72.5% ;
+  height: max-content;
+  background-color: var(--form-section-back-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding-bottom: 4rem;
+  justify-content:last baseline ;
+}
+
+section.entry-forms-section h2{
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.photo-facts-container{
+  place-self: center;
+  text-align: center;
+  margin: 4rem 0 3rem -2rem;
+  height: max-content;
+ }
+
+.forms-holder{
+  min-height: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+}
+
+form :is(label, button){
+  text-transform: capitalize;
+}
+
+label{
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-wrap: nowrap;
+}
+
+form :is(input, button){
+  outline: none;
+  border: none;
+  padding: 1rem;
+  margin-top: .5rem;
+  border-radius: .3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+form input{
+  background-color: var(--input-back-color);
+  color: var(--txt-color);
+}
+
+form input::placeholder{
+  font-style: italic;
+  color: var(--btn-back-color);
+  font-size: 1rem;
+}
+
+form button{
+  background-color: var(--btn-back-color);
+  color: var(--back-main-color);
+}
+
+/* loading spinner stylings */
+.spinner{
+  margin: 4rem auto;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  border: 1rem solid var(--form-section-back-color) ;
+  border-top-color: var(--btn-back-color);
+  border-bottom-color: var(--btn-back-color);
+  animation: rotate 1.3s infinite  linear forwards;
+}
+
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+/* end of loading spinner stylings */
+
+section.results-holder ol.result-items{
+  list-style-type: decimal;
+  text-align: left;
+  margin-left: .8rem;
+}
+
+ol.result-items li.item{
+  margin: 1rem auto;
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+/* result Images stylings */
+ol.cat-image-holder {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+}
+
+.cat-image{
+  width: calc( 34% - 1rem);
+  min-width: 14rem;
+  object-fit: cover;
+  height: 25rem;
+}
+/* end of result Images stylings */
+
+
+/* error stylyings */
+p.error {
+  color: rgb(245, 90, 0);
+  background-color: rgb(250, 194, 161);
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: .3rem;
+}
+/* end of error stylings */
+
+/* Responsiveness Stylings */
+@media screen and (max-width:25.5em) and (min-width: 14.375em){
+  .forms-holder{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:1 ){
+
+}
+@media screen and (max-width:1 ){
+
+}
+/* End of Responsiveness Stylings */
