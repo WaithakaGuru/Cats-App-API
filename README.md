@@ -8,7 +8,7 @@
 
 - [📘 About This Repo](#-about-this-repo)
 - [🧠 What is TheCatAPI?](#-what-is-thecatapi)
-- [🪶 Features](#-feature)
+- [🪶 Features](#-features)
 - [🫵 Try it Out](#-try-it-out)
 - [📸 Screenshot](#-screenshot)
 - [🛠️ Built With](#-built-with)
