@@ -226,9 +226,10 @@ p.error {
   .forms-holder{
     padding-left: .5rem;
     padding-right: .5rem;
-  
+  }
   .cat-image {
     min-width: 22rem;
   }
 }
+
 /* End of Responsiveness Stylings */
