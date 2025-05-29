@@ -26,7 +26,7 @@
 
 ## 📘 About This Repo
 
-**Cats App** is a lightweight JS  app that fetches and displays information about various cat facts using the [TheCatAPI](https://thecatapi.com/). It's a hands-on project built to strengthen understanding of API consumption using **Axios**.
+**Cats App** is a lightweight JS app that fetches and displays information about various cat facts using the [TheCatAPI](https://thecatapi.com/). It's a hands-on project built to strengthen understanding of API consumption using **Axios**.
 
 ### 🧠 What is TheCatAPI?
 
@@ -52,7 +52,7 @@
 
 ## 📸 Screenshot
 
-![screenshot](./public/image.png) 
+![screenshot](./public/image.png)
 
 ---
 
@@ -72,7 +72,7 @@
 
 ```bash
 git clone https://github.com/WaithakaGuru/cats-app.git
-``` 
+```
 
 2. Navigate to the project folder:
 
@@ -91,9 +91,11 @@ npm install
 ```bash
 npm start
 ```
+
 ---
 
 ## 🧪 How to Use the Site
+
 1. Open the app.
 
 1. View the list of cat facts fetched in real-time.
@@ -103,7 +105,8 @@ npm start
 ---
 
 ## 🤔 How It Works
- - The app loads.
+
+- The app loads.
 
 - Axios sends a GET request to TheCatAPI.
 
@@ -114,6 +117,7 @@ npm start
 ---
 
 ## ❗ Error Handling
+
 - ⚠️ Displays a loading state while data is fetched.
 
 ❌ Shows an error message when:
@@ -125,6 +129,7 @@ npm start
 ---
 
 ## 🙌 Acknowledgments
+
 Thanks to TheCatAPI for providing the amazing free data.
 
 Built as a self-learning challenge and inspired by fellow developers sharing their projects.
@@ -132,11 +137,13 @@ Built as a self-learning challenge and inspired by fellow developers sharing the
 ---
 
 ## 📜 License
+
 No license for now.
 
 ---
 
 ## 💬 Contact
+
 For questions, confirmation or collaboration find me at:
 GitHub: [WaithakaGuru](https://github.com/WaithakaGuru)
 
