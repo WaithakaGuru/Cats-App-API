@@ -219,12 +219,16 @@ p.error {
   }
 }
 
-@media screen and (max-width: 38em) {
+@media screen and (max-width: 48em) {
   section.results-holder ol.result-items {
     width: 100%;
   }
+  .forms-holder{
+    padding-left: .5rem;
+    padding-right: .5rem;
+  
   .cat-image {
-    min-width: 20rem;
+    min-width: 22rem;
   }
 }
 /* End of Responsiveness Stylings */
