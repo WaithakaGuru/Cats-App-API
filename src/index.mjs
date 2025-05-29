@@ -26,6 +26,7 @@ const verifyUserInput = (userInput, maxValue) => {
 };
 
 const addLoadingState = (loadingStateCode) => {
+<<<<<<< HEAD
   if (loadingStateCode === 1) {
     resultsContainer.classList.add("none");
     loadingSpinner.classList.remove("none");
@@ -35,6 +36,18 @@ const addLoadingState = (loadingStateCode) => {
     resultsContainer.classList.remove("none");
   }
 };
+=======
+   if(loadingStateCode === 1){
+        resultsContainer.classList.add("none");
+        loadingSpinner.classList.remove("none");
+        loadingSpinner.style.minHeight = "8rem";
+    }
+    else{
+        loadingSpinner.classList.add("none");
+        resultsContainer.classList.remove("none");
+    }
+}
+>>>>>>> 82c2206f97e7fa1a8c1fb928a3b583e284094eb7
 
 function getRequest(btnClicked, userInput, APICall) {
   btnClicked.addEventListener("click", async (e) => {
@@ -45,6 +58,7 @@ function getRequest(btnClicked, userInput, APICall) {
       const data = await APICall(cleanInput);
       let listHTML = `<ol class="result-items cat-image-holder">`;
 
+<<<<<<< HEAD
       if (btnClicked === factBtn) {
         addLoadingState(0);
         data.data.forEach((fact) => {
@@ -66,6 +80,30 @@ function getRequest(btnClicked, userInput, APICall) {
       resultsContainer.innerHTML = `<p class='error'>Error: Something went Wrong. Please try again Later!! :(</p>`;
     }
   });
+=======
+            if(btnClicked === factBtn){
+                addLoadingState(0)
+                data.data.forEach(fact => {
+                    listHTML += `<li class="item">${fact}</li>`
+                });
+                listHTML+=`</ol>`
+                resultsContainer.innerHTML = listHTML;
+            }else if(btnClicked === photoBtn){ 
+                addLoadingState(0)
+                data.forEach(image => {
+                    listHTML+= `<img src="${image.url}" alt="image"  class="cat-image"/>`;
+                });
+                listHTML+=`</ol>`
+                resultsContainer.innerHTML = listHTML;
+            }
+            
+        } catch (e) {
+            console.log(e);
+            addLoadingState(0);
+            resultsContainer.innerHTML = `<p class='error'>Error: Something went Wrong. Please try again Later!! :(</p>`
+        }
+    })
+>>>>>>> 82c2206f97e7fa1a8c1fb928a3b583e284094eb7
 }
 getRequest(factBtn, catFactsInput, getFacts);
 getRequest(photoBtn, catPhotosInput, getCatPhotos);
