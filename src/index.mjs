@@ -27,8 +27,9 @@ const verifyUserInput = (userInput, maxValue) => {
 
 const addLoadingState = (loadingStateCode) => {
    if(loadingStateCode === 1){
-        loadingSpinner.classList.remove("none");
         resultsContainer.classList.add("none");
+        loadingSpinner.classList.remove("none");
+        loadingSpinner.style.minHeight = "8rem";
     }
     else{
         loadingSpinner.classList.add("none");
@@ -47,7 +48,7 @@ function getRequest  (btnClicked, userInput, APICall)  {
 
             if(btnClicked === factBtn){
                 addLoadingState(0)
-                data.forEach(fact => {
+                data.data.forEach(fact => {
                     listHTML += `<li class="item">${fact}</li>`
                 });
                 listHTML+=`</ol>`

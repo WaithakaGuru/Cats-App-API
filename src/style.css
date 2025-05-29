@@ -8,10 +8,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --back-main-color: #fff5f1;
-  --form-section-back-color: #fbd1c7;
+  --back-main-color: #fff7f3;
+  --form-section-back-color: #fad0c4;
   --txt-color: #000;
-  --btn-back-color: #c593ae;
+  --btn-back-color: #c599b6;
   --btn-txt-color: #fff5f0;
   --input-back-color: #fff;
   --input-border-color: #e5e7eb;
@@ -48,20 +48,18 @@ body{
 }
 
 .forms-holder, .photo-facts-container{
-  width: 65.6%;
+  width: 75.6%;
 }
 
 section.entry-forms-section{
   width: 100%;
-  min-height: 72.5% ;
-  height: max-content;
   background-color: var(--form-section-back-color);
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  padding-bottom: 4rem;
-  justify-content:last baseline ;
+  justify-content:center;
+  padding: 4rem;
 }
 
 section.entry-forms-section h2{
@@ -77,11 +75,10 @@ section.entry-forms-section h2{
  }
 
 .forms-holder{
-  min-height: 90%;
+  max-height: max-content;
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-
+  justify-content: center;
+  gap: 8rem;
 }
 
 form :is(label, button){
@@ -143,15 +140,17 @@ form button{
 /* end of loading spinner stylings */
 
 section.results-holder ol.result-items{
+  width: 85%;
   list-style-type: decimal;
-  text-align: left;
   margin-left: .8rem;
+  place-self: center;
 }
 
 ol.result-items li.item{
-  margin: 1rem auto;
-  font-size: 1.3rem;
+  width: 100%;
   text-align: left;
+  margin: .1rem auto;
+  font-size: 1.3rem;
 }
 
 /* result Images stylings */
@@ -185,15 +184,40 @@ p.error {
 /* end of error stylings */
 
 /* Responsiveness Stylings */
-@media screen and (max-width:25.5em) and (min-width: 14.375em){
-  .forms-holder{
-    flex-direction: column;
+@media screen and (max-width:63.4375em){
+  form{
+    width: max-content;
   }
 }
-@media screen and (max-width:1 ){
-
+@media screen and (min-width:63.4375em ){
+  .forms-holder{
+    width: max-content;
+  }
 }
-@media screen and (max-width:1 ){
+@media screen and (max-width:57.1875em ){
+  label{
+    text-wrap: wrap;
+  }
+}
+@media screen and (max-width:44.375em ){
+  .forms-holder{
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width:31.5em){
+  form {
+    max-width: min-content;
+  }
+}
 
+@media screen and (max-width:38em){
+  section.results-holder ol.result-items{
+    width: 100%;
+  }
+  .cat-image{
+    min-width: 20rem;
+  }
 }
 /* End of Responsiveness Stylings */
