@@ -73,6 +73,13 @@ section.entry-forms-section h2 {
   text-align: center;
   margin: 4rem 0 3rem -2rem;
   height: max-content;
+ }
+
+.forms-holder{
+  max-height: max-content;
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
 }
 
 .forms-holder {
